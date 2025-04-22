@@ -31,7 +31,6 @@ This project implements a **role-based access control**  system for managing ele
 | `CreateItem`   | Adds a new electronic item                     | Only Manufacturer                  |
 | `ReadItem`     | Retrieves an item by ID                        | Public                             |
 | `DeleteItem`   | Deletes an item by ID                          | Only Manufacturer                  |
-| `ItemExists`   | Checks if an item exists in the ledger         | Public                             |
 
 ---
 
@@ -41,3 +40,68 @@ This project implements a **role-based access control**  system for managing ele
 
 ```bash
 minifab invoke -n Electronic-Fabric -p '"CreateItem","EL01","WashingMachine","Auto120","Gray","Whirlpool"'
+```
+### 🔹 Read an Item
+
+```
+minifab query -n Electronic-Fabric -p '"ReadItem","EL01"'
+```
+### 🔹 Delete an Item
+
+```
+minifab invoke -n Electronic-Fabric -p '"DeleteItem","EL01"'
+```
+## 🛡️ Access Control
+
+This project uses the MSP ID of the invoking client to determine permissions.
+
+- 👨‍🏭 Manufacturer (manufacturer-electronics-com)
+
+   - Can create and delete items
+
+- 👥 Other Organizations
+
+  - Can only read data
+
+
+
+## 🚀 Getting Started with Electronic-Fabric
+
+### ✅ Requirements
+
+1. **Install Prerequisites**  
+   Make sure you have the following installed:
+   
+    -✅ Go (v1.20+)
+
+    -✅ Docker and Docker Compose
+    
+    -✅ Minifabric
+
+
+2. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/Electronic-Fabric.git
+   ```
+   ```
+   cd Electronic-Fabric
+   ```
+3.Start the Network with Minifabric
+```
+minifab up -i 2.4.8
+```
+4.Install, Approve, and Commit the Chaincode
+```
+minifab install,approve,commit -n Electronic-Fabric -p ./chaincode -l golang
+```
+
+
+
+
+
+
+
+
+
+
+

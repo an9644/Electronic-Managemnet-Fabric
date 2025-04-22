@@ -11,7 +11,7 @@ This project implements a **role-based access control**  system for managing ele
 ![Hyperledger Fabric](https://img.shields.io/badge/Hyperledger%20Fabric-101010?style=for-the-badge&logo=hyperledger&logoColor=white)
 ![CouchDB](https://img.shields.io/badge/CouchDB-DC2626?style=for-the-badge&logo=apachecouchdb&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Minifabric](https://img.shields.io/badge/Minifabric-blue?style=for-the-badge)
+![Minifab](https://img.shields.io/badge/Minifabric-blue?style=for-the-badge)
 
 ---
 
@@ -81,7 +81,7 @@ This project uses the MSP ID of the invoking client to determine permissions.
 
 2. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/Electronic-Fabric.git
+   git clone git@github.com:an9644/Electronic-Managemnet-Fabric.git
    ```
    ```
    cd Electronic-Fabric
